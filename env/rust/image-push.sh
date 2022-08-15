@@ -1,7 +1,8 @@
 #!/bin/bash -eu
 
-: ${REPOSITORY:="peeeechi"}
-: ${IMAGE:="rust_env"}
+cd $(dirname $0)
+source ./.env
+
 : ${TAG:="latest"}
 
 docker push "${REPOSITORY}/${IMAGE}:${TAG}"

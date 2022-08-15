@@ -1,9 +1,8 @@
 #!/bin/bash -eu
 
 cd $(dirname $0)
+source ./.env
 
-: ${REPOSITORY:="peeeechi"}
-: ${IMAGE:="rust_env"}
 : ${TAG:="latest"}
 
 ENVS="-e UID=`(id -u)` \
